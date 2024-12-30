@@ -13,7 +13,7 @@ pipeline {
         {
             step
             {
-                withDockerRegistry(credentialsId: 'dockerhub', url:"")
+                withDockerRegistry(credentialsId: 'dockerhub', url:"https://index.docker.io/v1/")
                 {
                     bat 'docker build -t 21127636/mmtnc_project .'
                     bat 'docker push 21127636/mmtnc'
